@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller 1 TypeScript</title>
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -13,8 +14,8 @@
     <div class="container">
         <div class="row p-3">
             <div class="col-lg-6 text-center">
-                <h1>Ana María Suarez</h1>
-                <img class="mt-2 mb-2" src="https://drive.google.com/uc?id=13THQEyFC31QUl4tAP8M01LOFkC8AbBEt"
+                <h1 id="main-name">Ana María Suarez</h1>
+                <img class="mt-2 mb-2" id="pic" src="https://drive.google.com/uc?id=13THQEyFC31QUl4tAP8M01LOFkC8AbBEt"
                     height="300px" width="300px" alt="Avatar">
                 <div class="border rounded p-3 m-2 text-left">
                     <h2>Datos Personales</h2>
@@ -24,27 +25,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th>Código</th>
-                                <td>10234320</td>
-                            </tr>
-                            <tr>
-                                <th>Cédula</th>
-                                <td>12221122</td>
-                            </tr>
-                            <tr>
-                                <th>Edad</th>
-                                <td>25 Años</td>
-                            </tr>
-                            <tr>
-                                <th>Dirección</th>
-                                <td>Calle falsa 123</td>
-                            </tr>
-                            <tr>
-                                <th>Teléfono</th>
-                                <td>018002500</td>
-                            </tr>
+                        <tbody id="student-body">
                         </tbody>
                     </table>
                 </div>
@@ -84,7 +65,29 @@
                         </tr>
                     </tbody>
                 </table>
-                <h5 class="col-8 offset-4"> <strong>Total Creditos :</strong> <strong id="total-credits"></strong></h5>
+                <div class="container">
+                    <div class="row">
+                        <div class="input-group col-5 mb-3 p-0 ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Minimo</span>
+                            </div>
+                            <input type="text" class="form-control borde-izquierdo" id="credit-min">
+                        </div>
+
+                        <div class="input-group col-5 mb-3 p-0">
+                            <input type="text" class="form-control borde-derecho" id="credit-max">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Maximo</span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" id="button-filterByCredit" class="btn btn-success">Aplicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="col-8 offset-4"> <strong>Total Creditos :</strong> <strong id="total-credits">15</strong>
+                </h5>
             </div>
         </div>
         <div class="row p-3">
